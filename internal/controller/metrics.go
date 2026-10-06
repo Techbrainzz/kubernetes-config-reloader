@@ -17,4 +17,4 @@ var (
 func init() {
 	// Register custom metrics with controller-runtime's registry
 	metrics.Registry.MustRegister(ConfigSyncsTotal)
-}
+}	
