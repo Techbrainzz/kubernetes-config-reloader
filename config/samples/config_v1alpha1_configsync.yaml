@@ -1,0 +1,12 @@
+apiVersion: config.infra.io/v1alpha1
+kind: ConfigSync
+metadata:
+  name: configsync-sample
+  namespace: default
+spec:
+  targetNamespace: default
+  configData:
+    app_mode: "production"
+    cache_ttl: "3200"
+  targetDeployments:
+    - my-app

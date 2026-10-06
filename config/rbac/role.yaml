@@ -1,0 +1,32 @@
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: manager-role
+rules:
+- apiGroups:
+  - config.infra.io
+  resources:
+  - configsyncs
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - config.infra.io
+  resources:
+  - configsyncs/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - config.infra.io
+  resources:
+  - configsyncs/status
+  verbs:
+  - get
+  - patch
+  - update
